@@ -1,0 +1,701 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.app {
+  display: flex;
+}
+
+.sidenav {
+  width: 25%;
+  height: 99.7vh;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.logo {
+  display: flex;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+#kanban_title {
+  font-size: 35px;
+  margin-top: -10px;
+  padding-left: 15px;
+}
+.boards {
+  margin-top: 40px;
+}
+
+.all_boards {
+  display: flex;
+  color: #9fa9b8;
+  margin-left: 30px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+#all_boards_total {
+  margin-left: 5px;
+}
+
+#sidebars {
+  margin-top: 25px;
+  height: 47vh;
+  overflow: scroll;
+  -ms-overflow-style: none;
+}
+
+#sidebars::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar_dropdowns,
+#create_board {
+  display: flex;
+  margin-right: 30px;
+  margin-left: -25px;
+  padding: 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  padding-left: 50px;
+  width: 78%;
+}
+
+.sidebar_dropdowns:hover {
+  cursor: pointer;
+  background-color: #fafbff !important;
+  color: #635fc7 !important;
+}
+
+#sidebar_boards {
+  padding-left: 15px;
+  margin-top: -2px;
+  font-size: 16px;
+}
+#create_board {
+  color: #8a87d5;
+}
+
+#create_board:hover {
+  cursor: pointer;
+  background-color: #fafbff;
+}
+
+#create_board_title {
+  padding-left: 6px;
+  margin-top: -2px;
+  font-size: 16px;
+}
+
+.mode {
+  display: flex;
+  width: 90%;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px 0px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #fafbff;
+}
+
+#light {
+  margin-left: 10px;
+}
+
+#dark {
+  margin-left: 10px;
+}
+
+.btn-group {
+  border-radius: 50px;
+  height: 20px;
+  width: 50px;
+  padding: 3px;
+  background-color: #635fc7;
+  margin-left: 15px;
+}
+
+.btn-group:hover {
+  cursor: pointer;
+}
+
+#monthly_btn {
+  border: none;
+  width: 40%;
+  height: 19px;
+  border-radius: 50%;
+  margin-left: 2px;
+  background-color: white;
+}
+
+#monthly_btn:hover {
+  cursor: pointer;
+}
+
+#yearly_btn {
+  margin-left: -5px;
+  border: none;
+  width: 40%;
+  height: 19px;
+  border-radius: 50%;
+  margin-left: 2px;
+  background-color: #635fc7;
+}
+
+#yearly_btn:hover {
+  cursor: pointer;
+}
+
+.hide_sidebar {
+  display: flex;
+  margin-top: 15px;
+  margin-left: -20px;
+  padding: 12px;
+  padding-left: 50px;
+  margin-right: 30px;
+  border-radius: 20px;
+}
+
+.hide_sidebar:hover {
+  cursor: pointer;
+  background-color: #fafbff;
+  color: #635fc7;
+}
+
+.hide {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: #9fa9b8;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-top: -3px;
+}
+
+.hide:hover {
+  color: #635fc7;
+}
+.center_content {
+  position: relative;
+}
+.options {
+  position: absolute;
+  right: 4%;
+  top: 15%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 15px 20px 15px 5px;
+}
+.edit_board {
+  border: none;
+  background-color: white;
+  color: #8f8f97;
+  text-align: left;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+.delete_board {
+  border: none;
+  background-color: white;
+  color: red;
+  margin-top: 15px;
+  text-align: left;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+.centre_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 164vh;
+}
+
+#selected_content {
+  margin-left: 40px;
+  font-size: 22px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 650;
+}
+
+#add_and_options {
+  width: 24%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#add_task {
+  padding: 12px 20px;
+  border: none;
+  font-size: 17px;
+  border-radius: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  background-color: #635fc7;
+  color: white;
+  margin-top: 3px;
+}
+
+#add_task:hover {
+  cursor: pointer;
+  background-color: deepskyblue;
+}
+#add_task:disabled {
+  background-color: deepskyblue;
+  cursor: auto;
+}
+
+#option_img {
+  padding-right: 30px;
+  margin-top: 14px;
+  cursor: pointer;
+}
+
+#add_popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  font-size: 18px;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  height: 430px;
+  width: 450px;
+  border-radius: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: scroll;
+  -ms-overflow-style: none;
+}
+
+#add_popup::-webkit-scrollbar {
+  display: none;
+}
+
+.add_popupbg {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 3, 3, 0.483);
+  z-index: 999;
+}
+
+#add_new_task,
+#create_new_task {
+  font-size: 24px;
+  font-weight: 500;
+}
+.task_name_and_error {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+#task_name_title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8f8f97;
+}
+.title_error {
+  color: red;
+  font-size: 13px;
+  margin-right: 47px;
+}
+
+.board_name_and_error {
+  display: flex;
+  justify-content: space-between;
+}
+.board_error {
+  color: red;
+  font-size: 13px;
+  margin-right: 47px;
+  margin-top: 23px;
+}
+#task_name,
+#board_name {
+  width: 85%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 8px;
+  border: 1px solid #e9e9e9;
+}
+#task_name:hover,
+#board_name:hover {
+  cursor: pointer;
+}
+
+#description_title,
+#subtasks_title,
+#current_status,
+#board_name_title,
+#board_columns_title {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8f8f97;
+}
+.sub_name_and_error {
+  display: flex;
+  justify-content: space-between;
+}
+.sub_error {
+  margin-top: 25px;
+  color: red;
+  font-size: 13px;
+  margin-right: 74px;
+}
+#description {
+  height: 170px;
+  width: 388px;
+  border-radius: 5px;
+  margin-top: 8px;
+  border: 1px solid #e9e9e9;
+}
+#description:hover {
+  cursor: pointer;
+}
+
+#input_boxes,
+#board_input_boxes {
+  display: flex;
+}
+
+#subtasks_input,
+#board_columns_input {
+  margin-top: 15px;
+  border-radius: 5px;
+  padding: 8px;
+  width: 80%;
+  border: 1px solid #e9e9e9;
+}
+
+#subtasks_input:hover,
+#board_columns_input:hover {
+  cursor: pointer;
+}
+
+#close {
+  font-size: 20px;
+  margin-left: 12px;
+  margin-top: 15px;
+  font-weight: 900;
+  color: #84909d;
+}
+#close:hover {
+  cursor: pointer;
+}
+
+#add_new_subtask {
+  width: 91%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  background-color: #635fc7;
+  border: none;
+}
+#add_new_subtask:hover {
+  cursor: pointer;
+}
+
+#actions {
+  width: 91%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #e9e9e9;
+}
+#actions:hover {
+  cursor: pointer;
+}
+
+#create_task,
+#add_new_column,
+#create_new_board {
+  width: 92%;
+  padding: 12px;
+  margin-top: 17px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  background-color: #635fc7;
+  border: none;
+}
+#create_new_board {
+  margin-top: 30px;
+  width: 93%;
+}
+#create_task:hover,
+#add_new_column:hover,
+#create_new_board:hover {
+  cursor: pointer;
+}
+
+#create_popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  font-size: 18px;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  height: 400px;
+  width: 450px;
+  border-radius: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: scroll;
+}
+
+#create_popup::-webkit-scrollbar {
+  display: none;
+}
+
+.centre_list {
+  width: 974px;
+}
+
+.overall_list {
+  height: 84.5vh;
+  width: 100%;
+  background-color: #fafbff;
+  display: flex;
+  overflow: auto;
+}
+
+.overall_list::-webkit-scrollbar {
+  display: none;
+}
+
+.add-column {
+  height: 64vh;
+  min-width: 270px;
+  background-color: #e7ecfddd;
+  color: #84909d;
+  font-size: 26px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 72px 15px 10px 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.add-column:hover {
+  cursor: pointer;
+  color: #635fc7 !important;
+}
+
+#todo {
+  min-width: 270px;
+  height: 500px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#todo_title {
+  display: flex;
+  margin: 25px;
+  margin-left: 23px;
+  letter-spacing: 2px;
+  color: #9fa9b8;
+}
+.add_contents {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 15px 10px 15px 20px;
+  padding: 20px 15px;
+  border-radius: 5px;
+  background-color: white;
+  width: 215px;
+}
+.add_contents:hover {
+  cursor: pointer;
+  color: #635fc7 !important;
+}
+#content_title {
+  font-weight: 600;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+#content_tasks {
+  font-size: 14px;
+  padding-top: 5px;
+  color: #9fa9b8;
+  pointer-events: none;
+}
+
+#view_popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  font-size: 18px;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  height: 290px;
+  width: 430px;
+  border-radius: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: scroll;
+  -ms-overflow-style: none;
+}
+
+#view_popup::-webkit-scrollbar {
+  display: none;
+}
+
+#view_head {
+  display: flex;
+  justify-content: space-between;
+}
+
+#view_option_icon {
+  padding-top: 8px;
+}
+#view_option_icon:hover {
+  cursor: pointer;
+}
+
+#view_title {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+#view_description {
+  font-size: 16px;
+  margin: 30px 0px;
+  color: #9fa9b8;
+}
+
+#view_subtask_content {
+  color: #9fa9b8;
+  display: flex;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#view_subtasks {
+  display: flex;
+  margin: 15px 0px;
+  background-color: #fafbff;
+  padding: 12px;
+  border-radius: 5px;
+  width: 95%;
+}
+#view_subtasks:hover {
+  background-color: rgba(127, 127, 206, 0.658) !important;
+}
+
+#view_check {
+  font-size: 40px;
+}
+#view_check:hover {
+  cursor: pointer;
+}
+
+#view_task {
+  padding-left: 8px;
+  margin-top: -4px;
+  font-size: 14px;
+}
+
+#view_bottom {
+  margin-top: 20px;
+}
+
+#view_current_status {
+  font-size: 16px;
+  color: #9fa9b8;
+  font-weight: 600;
+}
+
+#view_select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #e9e9e9;
+}
+#view_select:hover {
+  cursor: pointer;
+}
+.task-options {
+  position: fixed;
+  right: 30.6%;
+  top: 32%;
+  background-color: white;
+  display: flex;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 15px 20px 15px 5px;
+}
+.showicon {
+  display: flex;
+  margin-top: 385px;
+  margin-left: -20px;
+  padding: 12px;
+  width: 2%;
+  padding-left: 35px;
+  margin-right: 30px;
+  border-radius: 20px;
+  background-color: #635fc7;
+  position: fixed;
+  z-index: 10;
+  cursor: pointer;
+}
+.empty-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.empty-board p {
+  margin-top: 10px;
+  font-size: 21px;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #84909d;
+}
+.empty-board button {
+  margin-top: 20px !important;
+}
+.no-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+}
+.no-board p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #84909d;
+}
+.no-board button {
+  margin-top: 20px !important;
+}
